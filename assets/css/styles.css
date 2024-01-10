@@ -35,7 +35,6 @@ ul {
   max-width: 1080px;
   width: 100%;
   margin: auto;
-  padding: 0 20px;
 }
 
 .btn {
@@ -100,6 +99,7 @@ ul {
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: right top;
+  padding: 0 20px;
 }
 @media only screen and (max-width: 576px) {
   .bg {
@@ -165,20 +165,27 @@ nav ul {
 nav ul li {
   margin-right: 10px;
 }
-nav ul li a {
+nav ul li:not(.btn) a {
   color: black;
   text-decoration: none;
   font-weight: 900;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   padding: 10px 10px;
 }
-nav ul li a:hover {
+nav ul li:not(.btn) a:hover {
   color: #fff;
   box-shadow: inset 100px 0 0 0 #372e7f;
+}
+nav ul li:not(.btn) a :host {
+  background-color: #000;
 }
 @media only screen and (max-width: 576px) {
   nav ul {
     margin-top: 30px;
+    margin-right: 0;
+  }
+  nav ul li a {
+    padding: 10px 0px !important;
   }
 }
 
@@ -228,6 +235,7 @@ nav ul li a:hover {
   }
   .keys li {
     margin-top: 20px;
+    margin-right: 0px !important;
   }
   .keys p {
     margin-top: 30px;

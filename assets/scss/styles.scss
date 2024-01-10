@@ -42,7 +42,7 @@
   @include xs-breakpoint {
     background-image: none;
   }
-  //animation: appear 0.4s ease-in forwards;
+  padding: 0 20px;
 }
 
 @keyframes appear {
@@ -104,7 +104,7 @@ nav ul {
   li {
     margin-right: 10px;
   }
-  li a {
+  li:not(.btn) a {
     color: black;
     text-decoration: none;
     font-weight: 900;
@@ -114,9 +114,18 @@ nav ul {
       color: #fff;
       box-shadow: inset 100px 0 0 0 #372e7f;
     }
+    :host {
+      background-color: #000;
+    }
   }
   @include xs-breakpoint {
     margin-top: 30px;
+    margin-right: 0;
+    li  {
+      a {
+        padding: 10px 0px !important;
+      }
+    }
   }
 }
 
@@ -166,6 +175,7 @@ nav ul {
     display: block;
     li {
       margin-top: 20px;
+      margin-right: 0px !important;
     }
     p {
       margin-top: 30px;
