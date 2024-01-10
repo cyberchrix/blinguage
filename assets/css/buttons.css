@@ -1,0 +1,29 @@
+.btn {
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  font-weight: 500;
+  color: #FCF2C3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #372E7F;
+}
+.btn a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn--transparent {
+  color: black;
+  border-color: black;
+  background-color: transparent;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.btn--transparent:hover {
+  border-color: transparent;
+  background-color: #372E7F;
+  color: #FCF2C3;
+}/*# sourceMappingURL=buttons.css.map */

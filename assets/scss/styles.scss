@@ -1,0 +1,200 @@
+@import "global";
+@import "buttons";
+@import "breakpoints.module";
+
+.logo {
+  &.go {
+    .text {
+      font-family: Fira Sans;
+      font-size: 25px;
+      display: block;
+    }
+    .text-stroke {
+      fill: #fff;
+      stroke: #fff;
+      stroke-width: 1px;
+      stroke-dashoffset: -900;
+      stroke-dasharray: 20;
+      stroke-linecap: butt;
+      animation: dash 0.5s ease-in-out forwards;
+    }
+    .text-stroke-2 {
+      stroke: #000;
+      animation-delay: 0s;
+    }
+  }
+}
+
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0;
+    fill: #000;
+  }
+}
+
+/* Background website */
+.bg {
+  background-image: url("../images/bg.jpg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: right top;
+  @include xs-breakpoint {
+    background-image: none;
+  }
+  //animation: appear 0.4s ease-in forwards;
+}
+
+@keyframes appear {
+  100% {
+    background-position: right top;
+  }
+}
+
+.hero {
+  h1 {
+    font-family: Fira Sans;
+    animation-duration: 0.5s;
+    animation-name: fadein;
+    animation-timing-function: ease-in;
+  }
+  p {
+    animation-duration: 1s;
+    animation-name: fadein;
+    animation-timing-function: ease-in;
+  }
+  .btn {
+    animation-duration: 1.5s;
+    animation-name: fadein;
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  @include xs-breakpoint {
+    display: block;
+  }
+}
+
+nav img {
+  width: 120px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  li {
+    margin-right: 10px;
+  }
+  li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 900;
+    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 10px 10px;
+    &:hover {
+      color: #fff;
+      box-shadow: inset 100px 0 0 0 #372e7f;
+    }
+  }
+  @include xs-breakpoint {
+    margin-top: 30px;
+  }
+}
+
+/* Hero section */
+.hero {
+  margin-top: 100px;
+  margin-bottom: 60px;
+  h1 {
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 16px;
+    max-width: 300px;
+    margin-bottom: 40px;
+  }
+  @include xs-breakpoint {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+/* Keys section */
+.keys {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+
+  li:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  img {
+    width: 50px;
+  }
+
+  p {
+    margin-top: 50px;
+    text-align: justify;
+  }
+
+  @include xs-breakpoint {
+    display: block;
+    li {
+      margin-top: 20px;
+    }
+    p {
+      margin-top: 30px;
+    }
+  }
+}
+
+.marquee {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee span {
+  font-family: Fira Sans;
+  font-size: 80px;
+  display: inline-block;
+  @include xs-breakpoint {
+    animation: marquee 10s linear infinite;
+    animation-delay: 2s;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

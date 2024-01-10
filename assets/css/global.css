@@ -1,0 +1,39 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600';
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;500';
+@import 'https://fonts.googleapis.com/css2?family=Merriweather:wght@700';
+@import 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  display: block;
+  height: 100%;
+}
+
+p, li {
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+h1 {
+  font-family: "Roboto";
+}
+
+body {
+  font-family: "Helvetica";
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1080px;
+  width: 100%;
+  margin: auto;
+  padding: 0 20px;
+}/*# sourceMappingURL=global.css.map */

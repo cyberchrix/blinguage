@@ -1,0 +1,263 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600';
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;500';
+@import 'https://fonts.googleapis.com/css2?family=Merriweather:wght@700';
+@import 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  display: block;
+  height: 100%;
+}
+
+p, li {
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+h1 {
+  font-family: "Roboto";
+}
+
+body {
+  font-family: "Helvetica";
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1080px;
+  width: 100%;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.btn {
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  font-weight: 500;
+  color: #FCF2C3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #372E7F;
+}
+.btn a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn--transparent {
+  color: black;
+  border-color: black;
+  background-color: transparent;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.btn--transparent:hover {
+  border-color: transparent;
+  background-color: #372E7F;
+  color: #FCF2C3;
+}
+
+.logo.go .text {
+  font-family: Fira Sans;
+  font-size: 25px;
+  display: block;
+}
+.logo.go .text-stroke {
+  fill: #fff;
+  stroke: #fff;
+  stroke-width: 1px;
+  stroke-dashoffset: -900;
+  stroke-dasharray: 20;
+  stroke-linecap: butt;
+  animation: dash 0.5s ease-in-out forwards;
+}
+.logo.go .text-stroke-2 {
+  stroke: #000;
+  animation-delay: 0s;
+}
+
+@keyframes dash {
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0;
+    fill: #000;
+  }
+}
+/* Background website */
+.bg {
+  background-image: url("../images/bg.jpg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+@media only screen and (max-width: 576px) {
+  .bg {
+    background-image: none;
+  }
+}
+
+@keyframes appear {
+  100% {
+    background-position: right top;
+  }
+}
+.hero h1 {
+  font-family: Fira Sans;
+  animation-duration: 0.5s;
+  animation-name: fadein;
+  animation-timing-function: ease-in;
+}
+.hero p {
+  animation-duration: 1s;
+  animation-name: fadein;
+  animation-timing-function: ease-in;
+}
+.hero .btn {
+  animation-duration: 1.5s;
+  animation-name: fadein;
+  animation-timing-function: ease-in;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+@media only screen and (max-width: 576px) {
+  nav {
+    display: block;
+  }
+}
+
+nav img {
+  width: 120px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+nav ul li {
+  margin-right: 10px;
+}
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 900;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 10px 10px;
+}
+nav ul li a:hover {
+  color: #fff;
+  box-shadow: inset 100px 0 0 0 #372e7f;
+}
+@media only screen and (max-width: 576px) {
+  nav ul {
+    margin-top: 30px;
+  }
+}
+
+/* Hero section */
+.hero {
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+.hero h1 {
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+.hero p {
+  font-size: 16px;
+  max-width: 300px;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 576px) {
+  .hero {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+/* Keys section */
+.keys {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+.keys li:not(:last-child) {
+  margin-right: 40px;
+}
+.keys img {
+  width: 50px;
+}
+.keys p {
+  margin-top: 50px;
+  text-align: justify;
+}
+@media only screen and (max-width: 576px) {
+  .keys {
+    display: block;
+  }
+  .keys li {
+    margin-top: 20px;
+  }
+  .keys p {
+    margin-top: 30px;
+  }
+}
+
+.marquee {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee span {
+  font-family: Fira Sans;
+  font-size: 80px;
+  display: inline-block;
+}
+@media only screen and (max-width: 576px) {
+  .marquee span {
+    animation: marquee 10s linear infinite;
+    animation-delay: 2s;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}/*# sourceMappingURL=styles.css.map */
