@@ -50,8 +50,14 @@
     </main>
 </body>
 <script>
+
+    function getResolution() {
+        alert("Your screen resolution is: " + screen.width + "x" + screen.height);
+    }
+
     $( document ).ready(function() {
         $('.logo').addClass('go');
+        getResolution();
     });
 </script>
 </html>
