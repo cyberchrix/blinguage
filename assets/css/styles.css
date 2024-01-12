@@ -69,7 +69,7 @@ ul {
 
 .logo.go .text {
   font-family: Fira Sans;
-  font-size: 25px;
+  font-size: 30px;
   display: block;
 }
 .logo.go .text-stroke {
@@ -82,7 +82,7 @@ ul {
   animation: dash 0.5s ease-in-out forwards;
 }
 .logo.go .text-stroke-2 {
-  stroke: #000;
+  stroke: #372e7f;
   animation-delay: 0s;
 }
 
@@ -90,7 +90,7 @@ ul {
   100% {
     stroke-dashoffset: 0;
     stroke-dasharray: 0;
-    fill: #000;
+    fill: #372e7f;
   }
 }
 /* Background website */

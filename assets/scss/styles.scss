@@ -6,7 +6,7 @@
   &.go {
     .text {
       font-family: Fira Sans;
-      font-size: 25px;
+      font-size: 30px;
       display: block;
     }
     .text-stroke {
@@ -19,7 +19,7 @@
       animation: dash 0.5s ease-in-out forwards;
     }
     .text-stroke-2 {
-      stroke: #000;
+      stroke: #372e7f;
       animation-delay: 0s;
     }
   }
@@ -29,7 +29,7 @@
   100% {
     stroke-dashoffset: 0;
     stroke-dasharray: 0;
-    fill: #000;
+    fill: #372e7f;
   }
 }
 
@@ -124,6 +124,7 @@ nav ul {
     li  {
       a {
         padding: 10px 0px !important;
+        font-size: 14px;
       }
     }
   }
